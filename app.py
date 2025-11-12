@@ -2,7 +2,7 @@ import time
 import keyboard
 from datetime import datetime
 
-target_time = "21:00"  # 24小時制
+target_time = "15:38"  # 24小時制
 print(f"等待到 {target_time} 自動按下 Enter...")
 
 while True:
@@ -10,6 +10,7 @@ while True:
     if now == target_time:
         keyboard.press_and_release('enter')
         print("✅ 已在指定時間按下 Enter")
+        print(datetime.now().strftime('%H:%M:%S.%f')[:-3])
         break
 print("已結束監控")
     # time.sleep(1)
